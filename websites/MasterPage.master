@@ -1,0 +1,364 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="websites_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head id="Head1" runat="server">
+    <title>首页--东华大学团委组织部</title>
+    <link id="style" rel="stylesheet" type="text/css" href="../styles/StyleSheet.css" />
+    <style type="text/css">
+        .style2
+        {
+            height: 40px;
+            width: 559px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="form1" runat="server">
+    <center>
+    <div style="height: 155px; width:900px;">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+    <td style="height: 155px; width:900px; background:url(../images/header.png);" align="right">
+       
+                    <table style="width:100%; height:100%">
+                    <tr><td style="height:115px" colspan="2"></td></tr>
+                     <tr>
+                     <td align="right" class="style2">
+                     &nbsp;&nbsp;<asp:LinkButton ID="LinkButton3" runat="server" class="s1" OnClick="link1_Click">网站首页</asp:LinkButton>
+                     &nbsp;│&nbsp;<asp:LinkButton ID="LinkButton2" runat="server" class="s1" OnClick="link2_Click">组织部建设</asp:LinkButton>
+                     &nbsp;│&nbsp;<asp:LinkButton ID="LinkButton1" runat="server" class="s1" OnClick="link3_Click">团务知识</asp:LinkButton>
+                     &nbsp;│&nbsp;<asp:LinkButton ID="LinkButton4" runat="server" class="s1" OnClick="link4_Click">留言板</asp:LinkButton></td>
+                     <td align="right"> 
+                     <img alt="" src="../images/tq.bmp" /><span style="font-size:18px; font-family: 幼圆; color:white;">
+                       <asp:LinkButton runat="server" ID="lb1" onclick="lb1_Click">团旗</asp:LinkButton>   </span>
+                     <img alt="" src="../images/th.bmp" /><span style="font-size:18px; font-family: 幼圆; color:white;">
+                     <asp:LinkButton runat="server" ID="LinkButton5" onclick="lb1_Click">团徽</asp:LinkButton></span>
+                     <img alt="" src="../images/tg.bmp" /><span style="font-size:18px; font-family: 幼圆; color:white;">
+                     <asp:LinkButton runat="server" ID="LinkButton6" onclick="lb1_Click">团歌</asp:LinkButton></span>
+                     <img alt="" src="../images/ts.bmp" /><span style="font-size:18px; font-family: 幼圆; color:white;">
+                     <asp:LinkButton runat="server" ID="LinkButton7" onclick="lb1_Click">团章</asp:LinkButton></span>
+                     </td></tr></table></td>
+    </tr>
+    </table>
+    </div>
+    <div style="width:900px; height:550px" >
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+       <td colspan="2">
+        <table id="navbar" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+        <td class="nl">
+        </td>
+        <td class="nm">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td class="time">
+
+                             <!--显示当前日期开始-->
+                            <script type="text/javascript">
+                            today=new Date();
+                            function initArray(){
+                            	this.length=initArray.arguments.length;
+                            		for(var i=0;i<this.length;i++)
+                            				this[i+1]=initArray.arguments[i];
+                            }
+                            var d=new initArray("星期日","星期一","星期二","星期三","星期四","星期五","星期六");
+                            document.write(
+                            	"<font color=#000000 style='color:white;font-size:9pt;font-family: 宋体'>",
+                            		today.getYear(),"年",
+                            		today.getMonth()+1,"月",
+                            		today.getDate(),"日 ",
+                            		 d[today.getDay()+1],
+                            		 	"</font>" );
+                            </script>
+                             <!--显示当前日期结束-->
+                        </td>
+                       
+                        <td align="right" class="s">
+                            <!-- 快速搜索栏 -->
+                            <img src="../images/Icon_explorer.gif" border="0" align="absmiddle" />
+                            
+                            <asp:TextBox ID="keyword" CssClass="searchbg" runat="server" />
+                            <asp:Button ID="Button1" runat="server" CssClass="btns" Text="搜索" ForeColor="white" 
+                                onclick="Unnamed1_Click"/>
+                           
+
+                        </td>
+                        
+                    </tr>
+                </table>
+        </td>
+        <td class="nr">
+        </td>
+    </tr>
+</table>
+       </td>
+      </tr>
+      <tr>
+    <td valign="top">
+    <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            
+        
+             </asp:ContentPlaceHolder>
+             </div>
+             </td>
+        <td valign="top">
+
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="right">
+               <div class="lframe">
+                <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0">
+                 <tr>
+                  <td class="tl"><div  class="tt">公告信息</div></td>
+                  <td class="tm"></td>
+                  <td class="tr"></td>
+                </tr>
+              </table>
+              <table width="100%" cellspacing="0" cellpadding="0">
+		       <tr>
+			    <td class="ml"></td>
+			    <td class="mm">
+                 <table width="100%" border="0" cellspacing="0" cellpadding="0" style="height:90px">
+                  <tr>
+                   <td align="right" width="20"><img src="../images/icon_1.gif" alt="" /></td>
+                   <td ><a href="#" >公告信息1</a></td>
+                 </tr>
+                 <tr>
+                  <td align="right" width="20"><img src="../images/icon_2.gif" /></td>
+                  <td ><a href="#" >公告信息2</a></td>
+                </tr>
+                <tr>
+                 <td align="right" width="20"><img src="../images/icon_3.gif" /></td>
+                 <td ><a href="#" >公告信息3</a></td>
+                </tr>  
+               </table>
+			    </td>
+			    <td class="mr"></td>
+		      </tr>
+             </table>
+	         <table width="100%" cellspacing="0" cellpadding="0" >
+		      <tr>
+			   <td class="bl"></td>
+			   <td class="bm">&nbsp;</td>
+			   <td class="br"></td>
+		     </tr>
+	        </table>
+           </div>
+
+               </td>
+</tr>
+<tr>
+ <td align="right">
+                 <div class="lframe">
+                  <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0">
+                   <tr>
+                    <td class="tl">
+                      <div class="tt">办公平台</div>
+                    </td>
+                    <td class="tm">
+                     <img src="../images/login.gif" border="0" />
+                    </td>
+                    <td class="tr"></td>
+                  </tr>
+                </table>
+                  <table width="100%" cellspacing="0" border="0" cellpadding="0">
+                  <tr>
+                <td class="ml"></td>
+                <td class="mm">
+                  <table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td valign="top" align="center">
+                           
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="height:95px">
+                                <tr>
+                                    <td align="right">
+                                        账号
+                                    </td>
+                                    <td>
+                                        <input type="text" class="loginInput" id="mem_Name" size="8" maxlength="50" runat="server" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right">
+                                        密码
+                                    </td>
+                                    <td>
+                                        <input type="password" class="loginInput" id="mem_Pass" size="8" maxlength="50" runat="server" />
+                                    </td>
+                                </tr>
+                               
+                                <tr>
+                                    <td colspan="2" align="center">
+                                        <asp:Button CssClass="input" Text="登录" runat="server" ID="sign_in" onclick="sign_in_Click"
+                                             />&nbsp;&nbsp;&nbsp; <asp:Button CssClass="input" Text="重填" runat="server" 
+                                            ID="Button2" onclick="Button1_Click"
+                                             />
+                                    </td>
+                                </tr>
+                            </table>
+                         
+                        </td>
+                     </tr>
+                   </table>
+                 </td>
+            <td class="mr">
+            </td>
+        </tr>
+    </table>
+                 <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                   <td class="bl"></td>
+                   <td class="bm">&nbsp;</td>
+                   <td class="br"></td>
+                 </tr>
+                </table>
+              </div>
+                </td>
+</tr>
+<tr>
+<td align="right" style="height:175px">
+        <div class="lframe">
+         <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="tl">
+                <div class="tt">友情链接</div>
+            </td>
+            <td class="tm">
+            <img alt="" src="../images/link.gif" border="0" />
+                
+            </td>
+            <td class="tr">
+            </td>
+        </tr>
+      </table>
+         <table width="100%" cellspacing="0" cellpadding="0" style="height:175px">
+         <tr>
+            <td class="ml">
+            </td>
+            <td class="mm link" align="center">
+                <div style="overflow: hidden; height: 141px; margin: 5px">
+                    <div id="oRollV1">
+                        <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+                    </div>
+                </div> 
+            </td>
+            <td class="mr">
+            </td>
+         </tr>
+        </table>
+         <table width="100%" cellspacing="0" cellpadding="0">
+         <tr>
+            <td class="bl">
+            </td>
+            <td class="bm">
+                &nbsp;
+            </td>
+            <td class="br">
+            </td>
+         </tr>
+        </table>
+        </div>        
+      </td>
+</tr>
+</table>
+       </td>
+
+    </tr>
+    </table>
+        </div>
+    
+        <div id="foot" style="width:900px;" >
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+    <td style="width:900px;">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td height="1">
+        </td>
+    </tr>
+    <tr align="center">
+        <td>
+            <table border="0" cellpadding="0" cellspacing="1"  width="100%">
+                <tr>
+                    <td align="center" valign="top" bgcolor="#FFFFFF">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td align="center"  class="helpercolor"  height="20">
+                                    
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+               
+            </table>
+        </td>
+        <td>
+         <table border="0" cellpadding="0" cellspacing="1"  width="100%">
+                <tr>
+                    <td align="center" valign="top" bgcolor="#FFFFFF">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td align="center" class="helpercolor"  height="20">
+                                    
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+               
+            </table>
+        </td>
+        <td>
+        <table border="0" cellpadding="0" cellspacing="1"  width="100%">
+                <tr>
+                    <td align="center" valign="top" bgcolor="#FFFFFF">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td align="center" class="helpercolor"  height="20">
+                                   
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+               
+            </table>
+        </td>
+        <td>
+        <table border="0" cellpadding="0" cellspacing="1"  width="100%">
+                <tr>
+                    <td align="center" valign="top" bgcolor="#FFFFFF">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td align="center"  class="helpercolor"  height="20">
+                                    
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                
+            </table>
+        </td>
+    </tr>
+</table>
+           <br/><span style=" font-size:13px; ">地址：东华大学松江校区活动中心 邮编：XXXXXXXX 电话号码：021-XXXX</span>
+            <br/>
+           <br/><span style=" font-size:13px; ">@Copy right   Donghua CST  width:78%; width:11%;</span>
+            </td>
+    </tr>
+    </table>
+        </div>
+        </center>
+    </form>
+</body>
+</html>
+
